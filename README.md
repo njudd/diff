@@ -1,6 +1,6 @@
-## Reaction Time attempt
+# Reaction Time attempt
 
-# Issues:
+### Issues:
 + Length of trial is unknown
 + Differing levels artificially effect RT's
 
