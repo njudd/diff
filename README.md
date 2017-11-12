@@ -1,9 +1,17 @@
 # Reaction Time attempt
 
+### Overview:
+
+Old scripts that tried to utilize reaction time differences.
+
+A function called getrtdiff.R allows one to get *****. This script isn't eloquent yet gets the job done for WMgrid trials.
+
 ### Issues:
 + Length of trial is unknown
 + Differing levels artificially effect RT's
 
-Old scripts that tried to utilize reaction time differences is called getrtdiff.R, this script isn't eloquent yet gets the job done of WMgrid trials.
+### Data:
+
+Password protected dropbox link for data!
 
 
