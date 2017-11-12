@@ -12,4 +12,4 @@ A function called getrtdiff.R allows one to get *****. This script isn't eloquen
 
 ### Data:
 
-Password protected dropbox [link](https://www.dropbox.com/s/gcadz4if72re47u/WMgrid_trials_trainingfullpure.zip?dl=0) for data!
+Password protected dropbox [**link**](https://www.dropbox.com/s/gcadz4if72re47u/WMgrid_trials_trainingfullpure.zip?dl=0) for data!
