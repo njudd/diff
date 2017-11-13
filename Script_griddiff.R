@@ -9,6 +9,16 @@ keep1 <- x
 
 x <- getrtdiff(x)
 keep2 <- x
+head(keep2)
+
+
+
+
+
+
+#####################
+#all of this is extra
+#####################
 
 #x <- x[x$logivec==1,] #only those with two occurances
 
