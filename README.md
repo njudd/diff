@@ -1,4 +1,4 @@
-# Reaction Time attempt
+# Reaction Time attempt WMgrid
 
 ### Overview:
 
