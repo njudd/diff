@@ -15,7 +15,7 @@ This script isn't eloquent yet gets the job done for WMgrid trials.
 ### Considerations:
 + Length of trial is unknown
 + Differing levels artificially effect RT's
-+ Each kid has a variable amount of occurences, this could adversely interplay with other factors. To strenghten analysis it would be ideal of find a min amount of acceptiable occurences and randomaly sample kids with more data.
++ Each kid has a variable amount of occurences, this could adversely interplay with other factors. To strenghten analysis it would be ideal of find a min amount of acceptiable occurences and randomoly sample kids with more data.
 
 ### Data:
 
