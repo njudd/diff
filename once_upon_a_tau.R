@@ -5,6 +5,13 @@
 # check other tasks, make a lm controlling for lv? or somehow get rid of lv
 
 
+# have reasonable cutoff's 
+# take the 2 most frequent lv's of a sub
+# get tau for each lv
+# make a weighted average, might as well also output the amount of trials (as a confidence measure)
+# if more than 100 trials, take it, also output # of levels
+
+
 table(x$Phase.Type) # whats the difference, If i remember correctly this df is clean
 
 
@@ -15,9 +22,6 @@ keep <-x
 library('tidyverse')
 library('retimes')
 
-
-table(x$Account, x$Problem.Level)
-weighted.mean() # good example section
 
 x <- x %>% 
   filter(Correct==1) %>% 
@@ -43,6 +47,12 @@ hist(ct, breaks = 45)
 mexgauss(ct)
 skew(ct)
 
+ctl3 <- x[x$Account=="kigetzutsu" & x$Problem.Level==3,]$Response.Time # lv = 3-6
+ctl4 <- x[x$Account=="kigetzutsu" & x$Problem.Level==4,]$Response.Time # lv = 3-6
+ctl5 <- x[x$Account=="kigetzutsu" & x$Problem.Level==5,]$Response.Time # lv = 3-6
+ctl6 <- x[x$Account=="kigetzutsu" & x$Problem.Level==6,]$Response.Time # lv = 3-6
+hist(ctl6)
+mexgauss(ctl4)
 
 
 set.seed(123)
