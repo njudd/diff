@@ -13,6 +13,11 @@ x <- read.csv("WMgrid_training_full_pure.csv")
 keep <-x
 
 library('tidyverse')
+library('retimes')
+
+
+table(x$Account, x$Problem.Level)
+weighted.mean() # good example section
 
 x <- x %>% 
   filter(Correct==1) %>% 
@@ -20,3 +25,58 @@ x <- x %>%
   summarise(mean = mean(Response.Time), median = median(Response.Time), sd = sd(Response.Time), count = n())
 
 write_csv(x, "rt_values.csv")
+
+# shitty tau
+ct <- x[x$Account=="batasage" & x$Problem.Level==4,]$Response.Time # lv = 5
+ct <- ct[ct>5000]
+hist(ct, breaks = 45)
+mexgauss(ct)
+skew(ct)
+# good tau
+# ct <- x[x$Account=="behaputsu" & x$Problem.Level==4,]$Response.Time # lv = 5
+# hist(ct, breaks = 45)
+# mexgauss(ct)
+
+ct <- x[x$Account=="behaputsu" & x$Problem.Level==4,]$Response.Time # lv = 5
+ct <- ct[ct>5000]
+hist(ct, breaks = 45)
+mexgauss(ct)
+skew(ct)
+
+
+
+set.seed(123)
+ct <- rnorm(100000, 10)
+hist(ct)
+mexgauss(ct)
+skew(ct)
+ct2 <- rnorm(100000, 10)
+hist(ct2)
+mexgauss(ct2)
+skew(ct2)
+ct3 <- rnorm(100000, 10)
+hist(ct3)
+mexgauss(ct3)
+skew(ct3)
+ct4 <- rnorm(100000, 10)
+hist(ct4)
+mexgauss(ct4)
+skew(ct4)
+
+##### making a right tail
+
+expont <- rnorm(100000, 0, 3)
+expont <- expont[expont>0.00001]+10
+
+#norm distro with tail
+ct5 <- c(ct,expont)
+hist(ct5)
+mexgauss(ct5)
+skew(ct5)
+# lessening the normal distribution on the left
+ct6 <- ct5[ct5>8]
+hist(ct6)
+mexgauss(ct6)
+
+
+
